@@ -1,31 +1,15 @@
 import React, {Component} from 'react';
 import Navitem from './Navitem';
-import NavBar, { ElementsWrapper } from 'react-scrolling-nav';
+import {Link} from 'react-scroll'
 class Navbar extends Component {
     render() {
-        const navbarItems = [{
-            label: "Home",
-            target: "home"
-        }, {
-            label: "Education",
-            target: "education"
-        }, {
-            label: "Skills",
-            target: "skills"
-        }, {
-            label: "Contact",
-            target: "contact"
-        }, {
-            label: "Item 5",
-            target: "item-5"
-        }]
         return (
             <nav>
                 <ul>
-                    <Navitem name="Home" ></Navitem>
-                    <Navitem name="Education"></Navitem>
-                    <Navitem name="Skills"></Navitem>
-                    <Navitem name="Contact"></Navitem>
+                    <Link activeClass="active" to="home" spy={true} smooth={true}><Navitem name="Om" ></Navitem></Link>
+                    <Link to="education" spy={true} smooth={true}><Navitem name="Utbildning"></Navitem></Link>
+                    <Link to="skills" spy={true} smooth={true}><Navitem name="Kunskaper"></Navitem></Link> 
+                    <Link to="contact" spy={true} smooth={true}><Navitem name="Kontakta mig"></Navitem></Link>
                 </ul>
             </nav>
         )

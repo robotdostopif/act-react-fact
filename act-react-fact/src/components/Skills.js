@@ -19,11 +19,11 @@ class Skills extends Component {
     }
     render() {
         return (
-            <div className="condiv skills">
+            <div id="skills" className="condiv skills">
                 <h1 className="subtopic">Färdigheter</h1>
                 <ul>{
                     this.state.myskills.map((value) => {
-                    return <Skillitem data={value}></Skillitem>
+                    return <Skillitem onMouseEnter={() => value += "hejsan"} data={value}></Skillitem>
                 })
                 }</ul>
             </div>
